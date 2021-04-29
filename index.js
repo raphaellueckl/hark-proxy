@@ -24,6 +24,6 @@ app.use(async (ctx) => {
 await app.listen({
   port: 8443,
   secure: true,
-  certFile: "/etc/letsencrypt/live/ripped.link/fullchain.pem",
+  certFile: "/etc/letsencrypt/live/ripped.link/cert.pem",
   keyFile: "/etc/letsencrypt/live/ripped.link/privkey.pem",
 });
