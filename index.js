@@ -21,4 +21,9 @@ app.use(async (ctx) => {
   ctx.response.body = { price: Number(pageHeader.split(",").join("")) };
 });
 
-await app.listen({ port: 8080 });
+await app.listen({
+  port: 443,
+  secure: true,
+  certFile: "/etc/letsencrypt/live/ripped.link/fullchain.pem",
+  keyFile: "/etc/letsencrypt/live/ripped.link/privkey.pem",
+});
