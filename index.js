@@ -14,6 +14,10 @@ app.use(async (ctx) => {
     .querySelector("#mrt-node-Lead-3-QuoteHeader")
     .querySelector('span[data-reactid="32"]').textContent;
   console.log({ price: Number(pageHeader.split(",").join("")) });
+  ctx.response.headers.set(
+    "Access-Control-Allow-Headers",
+    "Accept,Content-Type,X-Requested-With,x-api-key"
+  );
   ctx.response.body = { price: Number(pageHeader.split(",").join("")) };
 });
 
