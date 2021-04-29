@@ -21,13 +21,9 @@ app.use(async (ctx) => {
   ctx.response.body = { price: Number(pageHeader.split(",").join("")) };
 });
 
-<<<<<<< HEAD
 await app.listen({
   port: 8443,
   secure: true,
-  certFile: "/etc/letsencrypt/live/ripped.link/cert.pem",
+  certFile: "/etc/letsencrypt/live/ripped.link/fullchain.pem",
   keyFile: "/etc/letsencrypt/live/ripped.link/privkey.pem",
 });
-=======
-await app.listen({ port: 8080 });
->>>>>>> parent of a725fdc... add certfile
